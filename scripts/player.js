@@ -48,13 +48,14 @@ class Player {
     this.soundObject.setVolume(percent);
   }
 
-  // prettyTime (timeInSeconds) {
-  //   this.currentlyPlaying.duration = timeInSeconds;
-  //   let min = Math.floor(timeInSeconds / 60);
-  //   let sec = timeInSeconds % 60 < 10 ? '0' + timeInSeconds % 60 : timeInSeconds % 60; //add 0 before numbers < 10
-  //   let time = min + ':' + sec ;
-  //   this.soundObject.prettyTime();
-  // }
+  prettyTime (timeInSeconds) {
+    let M = Math.floor(timeInSeconds / 60);
+    let SS = timeInSeconds % 60 < 10 ?
+     '0' + Math.floor(timeInSeconds % 60) :
+     Math.floor(timeInSeconds % 60); //add 0 before numbers < 10
+    return timeInSeconds = M + ':' + SS ;
+    // this.soundObject.prettyTime(M + ':' + SS);
+  }
 
 }
 
